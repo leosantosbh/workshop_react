@@ -4,7 +4,7 @@ Caso você ainda não tenha o VSCode instalado. Link: https://code.visualstudio.
 
 Abra o CMD e confira se você já possui o node, npm e yarn instalados.
 
-<img src="/images/image_1.png" width="250">
+<img src="/images/image_1.png" width="400">
 
 Caso contrário, podemos utilizar um gerenciador de pacotes chamado [Chocolatey](https://chocolatey.org/) para realizar a instalação dos itens citados.
 
@@ -41,13 +41,13 @@ Agora basta clonar o repositório do projeto.
 
 Dentro da pasta do projeto, você pode abrir o PowerShell e usar `code .` para abrir o VS Code direto no diretório a ser trabalhado.
 
-<img src="/images/image_2.png" width="250">
+<img src="/images/image_2.png" width="400">
 
 Para instalar as dependências dos módulos, execute o comando `yarn`;
 
 Caso durante a instalação das dependências dê uma mensagem de erro informando que é necessário instalar a versão mais recente do Visual Studio com desenvolvimento C++
 
-<img src="/images/image_3.png" width="250">
+<img src="/images/image_3.png" width="400">
 
 Execute no PowerShell ou CMD o seguinte comando:
 ```
@@ -59,4 +59,4 @@ Feito isso, tente executar novamente a instalação das dependências.
 Pode demorar alguns minutos.
 Quando o prompt estiver disponível novamente para digitação, tente subir a aplicação com o comando `yarn start`
 
-<img src="/images/image_4.png" width="250">
+<img src="/images/image_4.png" width="400">
