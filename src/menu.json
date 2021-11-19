@@ -1,0 +1,16 @@
+{
+  "topArea": [],
+  "menu": [
+    {
+      "label": "Usuário",
+      "icon": "profile-gender_neutral_user",
+      "uri": "/usuario"
+    },
+    {
+      "label": "Formulário",
+      "icon": "ui-help",
+      "uri": "/formulario"
+    }
+  ]
+}
+

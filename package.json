@@ -1,0 +1,145 @@
+{
+  "name": "salesportal",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "start": "craco start",
+    "clean": "rimraf build .cache node_modules",
+    "lint": "eslint ./src/**/*.{ts,tsx} && tsc --build",
+    "staging": "NODE_ENV=staging craco build",
+    "build": "craco build"
+  },
+  "dependencies": {
+    "@digital/ui": "file:digital-ui-v1.2.16.tgz",
+    "antd": "3.22.0",
+    "axios": "^0.18.0",
+    "create-react-context": "^0.3.0",
+    "dayjs": "^1.10.5",
+    "easy-peasy": "2.1.5",
+    "highcharts": "^8.2.0",
+    "highcharts-react-official": "^3.0.0",
+    "html2pdf.js": "^0.9.3",
+    "js-file-download": "^0.4.7",
+    "moment": "^2.24.0",
+    "query-string": "^6.5.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-i18next": "10.11.4",
+    "react-perfect-scrollbar": "1.5.0",
+    "react-router-dom": "5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/runtime": "^7.4.4",
+    "@craco/craco": "^6.1.2",
+    "@types/faker": "^4.1.5",
+    "@types/node": "^15.12.4",
+    "@types/react": "16.8.13",
+    "@types/react-dom": "16.8.4",
+    "@types/react-router-dom": "4.3.2",
+    "@types/styled-components": "4.1.14",
+    "@types/yup": "0.26.12",
+    "@typescript-eslint/eslint-plugin": "1.6.0",
+    "@typescript-eslint/parser": "1.6.0",
+    "antd-dayjs-webpack-plugin": "^1.0.6",
+    "axios-mock-adapter": "^1.16.0",
+    "babel-plugin-module-resolver": "3.2.0",
+    "babel-plugin-styled-components": "^1.13.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "craco-fast-refresh": "^1.0.5",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-import-resolver-typescript": "1.1.1",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "faker": "^4.1.0",
+    "prettier": "1.17.0",
+    "react-scripts": "^4.0.3",
+    "rimraf": "2.6.3",
+    "typescript": "3.5.3",
+    "webpack": "4.44.2",
+    "webpackbar": "^5.0.0-3"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "airbnb",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-use-before-define": "off",
+      "import/no-extraneous-dependencies": "off",
+      "import/no-unresolved": "off",
+      "import/prefer-default-export": "off",
+      "react/jsx-closing-bracket-location": "off",
+      "react/jsx-filename-extension": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "react/jsx-wrap-multilines": "off",
+      "no-param-reassign": "off",
+      "no-use-before-define": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    }
+  },
+  "prettier": {
+    "eslintIntegration": true,
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "jsxBracketSameLine": true,
+    "arrowParens": "avoid"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-transform-runtime",
+      [
+        "module-resolver",
+        {
+          "root": ".",
+          "alias": {
+            "@app": "./src",
+            "@assets": "./assets"
+          }
+        }
+      ]
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "production": {
+    "baseURL": "/",
+    "enableMock": true
+  },
+  "staging": {
+    "baseURL": "/",
+    "enableMock": true
+  },
+  "development": {
+    "baseURL": "http://localhost:3330/",
+    "enableMock": true
+  }
+}
