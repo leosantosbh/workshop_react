@@ -1,18 +1,32 @@
-import { DataGrid } from '@digital/ui';
+import { DataGrid, notification } from '@digital/ui';
+import { FormContextProps } from '@digital/ui/lib/contexts/FormContext';
 import { Modal } from 'antd';
 import { ModalProps } from 'antd/lib/modal/Modal';
 import React from 'react';
 import { ColDef, SelectionChangedEvent } from 'ag-grid-community';
-import { dataGrid } from '../utils';
+import { ColumnsProps, dataGrid } from '../utils';
+import moment from 'moment';
 
+// import { Container } from './styles';
 interface ModalGridProps extends ModalProps {
   onClose: (value: boolean) => void;
+  formProps: FormContextProps;
 }
 
-const ModalGrid: React.FC<ModalGridProps> = ({ onClose, ...respProps }) => {
+const ModalGrid = ({ onClose, formProps, ...respProps }: ModalGridProps) => {
 
   const onSelect = (e: SelectionChangedEvent) => {
-    console.log(e);
+    const selectedLine = e.api.getSelectedRows()[0] as ColumnsProps;
+
+    formProps.formProps!.setValues({
+      ...formProps.formProps!.values,
+      NameTemp: selectedLine.templateName,
+      TipoTemp: selectedLine.tipoTemp,
+      DataExp: moment(selectedLine.dataExp, 'DD/MM/YYYY'),
+      LiderTemp: selectedLine.liderTemp,
+      DescTemp: selectedLine.descTemp,
+    })
+
     onClose(false);
   }
 

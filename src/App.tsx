@@ -2,7 +2,7 @@ import { AppContainer, Locales } from '@digital/ui';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Logo from '../assets/images/logo_small.png';
-import models from '../src/store/models';
+import models from './store/models';
 import { enUS, ptBR } from './i18n';
 import AppRoutes from './routes/AppRoutes';
 

@@ -1,14 +1,22 @@
 import React from 'react';
-import { GridView, SimpleView, Widget } from '@digital/ui'
+import { FormContext, Form, GridView, SimpleView, FormResetButton, FormSubmitButton } from '@digital/ui'
+import FormContextView from './FormContext';
 
 const FormView: React.FC = () => {
 
   return (
     <SimpleView>
       <GridView noform>
-        <Widget>
-          <h1>Formulário de Documento</h1>
-        </Widget>
+        <Form onSubmit={values => console.log(values)} actions={[
+          <FormResetButton key="reset" />,
+          <FormSubmitButton key="submit" />
+        ]}>
+          <FormContext.Consumer>
+            {formProps => (
+              formProps && <FormContextView formProps={formProps} />
+            )}
+          </ FormContext.Consumer>
+        </ Form>
       </GridView>
     </SimpleView>
   );
